@@ -255,18 +255,6 @@ body {
     }
 }
 
-.about {
-    position: relative;
-}
-
-.about-absolute {
-    position: absolute;
-    z-index: 200;
-    background-color: white;
-    left: 10%;
-    right: 10%;
-}
-
 .about__group-blocks {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -281,7 +269,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 670px;
     margin-right: 20px;
 }
 
@@ -334,29 +322,30 @@ body {
 }
 
 .about__bg-image {
-    width: 100%;
+    width: 670px;
     display: flex;
     align-items: center;
     position: relative;
-    height: 475px;
-    width: 600px;
     border-radius: 5px;
     background-size: cover;
 
     &::after {
-        right: -30px;
-        top: 25%;
+        right: 40px;
+        top: 30%;
         @extend %yellowSquare;
     }
 }
 
 .ourteam {
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-image: url(../images/ourteam-bg-image.png);
     background-size: cover;
     position: relative;
 
     &::before {
         position: absolute;
+        top: 0;
         content: "";
         background-color: white;
         width: 1px;
@@ -367,6 +356,7 @@ body {
 }
 
 .ourteam__group-blocks {
+    display: flex;
     justify-content: space-around;
 
     &::after {
@@ -403,7 +393,7 @@ body {
 .ourteam__bg-group {
     display: flex;
     justify-content: flex-end;
-    width: 600px;
+    width: 100%;
 }
 
 .ourteam__bg-image {
@@ -413,6 +403,7 @@ body {
     justify-content: flex-end;
     height: 475px;
     width: 600px;
+    margin-right: 50px;
     border-radius: 5px;
     background-size: contain;
 
@@ -434,22 +425,39 @@ body {
 .ourteam-title {
     @extend %mainTitle;
     color: white;
+
+    &::after {
+        right: 37%;
+    }
 }
 
 .ourteam-prew {
+    text-align: center;
+    font-family: 'open-sans';
+    font-size: 14px;
+    line-height: 24px;
     color: white;
 }
 
 .ourteam-descr {
+    text-align: center;
+    font-family: 'open-sans-semi';
+    font-size: 12px;
+    line-height: 24px;
     color: white;
     opacity: 0.8;
 }
 
 .ourteam__group-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin-right: 0;
+    text-align: center;
     position: relative;
-    margin-right: 50px;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .formbook__group-content {
@@ -826,6 +834,85 @@ body {
     .header-main__center-title {
         font-size: 68.5px;
     }
+
+    .about__group-text {
+        width: 500px;
+    }
+
+    .about__bg-image {
+        width: 500px;
+
+        &::after {
+            right: -26%;
+        }
+    }
+
+    .ourteam__group-blocks {
+        justify-content: center;
+    }
+
+    .ourteam__group-text {
+        width: 500px;
+    }
+
+    .ourteam__bg-group {
+        width: 500px;
+    }
+
+    .ourteam__bg-image {
+
+        &::after {
+            left: -30%;
+        }
+    }
+}
+
+@media(max-width: 1300px) {
+
+    .about__group-text {
+        width: 400px;
+    }
+
+    .about__bg-image {
+        width: 400px;
+
+        img {
+            height: 450px;
+            width: 450px;
+        }
+
+        &::after {
+            top: 28%;
+            right: -25%;
+            padding: 80px;
+        }
+    }
+
+    .ourteam__group-blocks {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+
+    .ourteam__group-text {
+        width: 400px;
+    }
+
+    .ourteam__bg-group {
+        width: 400px;
+    }
+
+    .ourteam__bg-image {
+        img {
+            height: 350px;
+            width: 350px;
+        }
+
+        &::after {
+            top: 30%;
+            left: -27%;
+            padding: 80px;
+        }
+    }
 }
 
 @media(max-width: 1200px) {
@@ -839,6 +926,64 @@ body {
             width: 308px;
         }
     }
+
+    .about__group-text {
+        width: 340px;
+        margin: 0;
+    }
+
+    .about-title {
+        font-size: 31px;
+        line-height: 42px;
+    }
+
+    .about-prew {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .about-descr {
+        font-size: 11px;
+        line-height: 21px;
+    }
+
+    .about__bg-image {
+        width: 340px;
+
+        img {
+            width: 390px;
+            height: 390px;
+        }
+
+        &::after {
+            top: 30%;
+            right: -28%;
+            border: 10px solid #E8C300;
+            padding: 70px;
+        }
+    }
+
+    .ourteam__group-text {
+        width: 400px;
+    }
+
+    .ourteam__bg-group {
+        width: 400px;
+    }
+
+    .ourteam__bg-image {
+        img {
+            height: 350px;
+            width: 350px;
+        }
+
+        &::after {
+            top: 30%;
+            left: -27%;
+            padding: 80px;
+        }
+    }
+
 }
 
 @media(max-width: 900px) {
@@ -856,6 +1001,51 @@ body {
         width: 150px;
         height: 40px;
     }
+
+    .about__group-blocks {
+        padding-right: 5%;
+    }
+
+    .about__group-text {
+        width: 250px;
+        margin: 0;
+    }
+
+    .about-title {
+        font-size: 25px;
+        line-height: 38px;
+
+        &::after {
+            right: 25%;
+        }
+    }
+
+    .about-prew {
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    .about-descr {
+        font-size: 10px;
+        line-height: 19px;
+    }
+
+    .about__bg-image {
+        width: 250px;
+
+        img {
+            width: 320px;
+            height: 320px;
+        }
+
+        &::after {
+            top: 30%;
+            right: -40%;
+            border: 8px solid #E8C300;
+            padding: 55px;
+        }
+    }
+
 }
 
 @media(max-width: 700px) {
@@ -921,6 +1111,49 @@ body {
             }
         }
     }
+
+    .about__group-text {
+        width: 250px;
+        margin: 0;
+    }
+
+    .about-title {
+        font-size: 22px;
+        line-height: 30px;
+
+        &::after {
+            right: 23%;
+            height: 4px;
+        }
+    }
+
+    .about-prew {
+        font-size: 9px;
+        line-height: 15px;
+    }
+
+    .about-descr {
+        font-size: 8px;
+        line-height: 16px;
+        margin: 0;
+    }
+
+    .about__bg-image {
+        width: 250px;
+
+        img {
+            width: 250px;
+            height: 250px;
+        }
+
+        &::after {
+            top: 30%;
+            right: -11%;
+            border: 6px solid #E8C300;
+            padding: 45px;
+        }
+    }
+
 }
 
 @media(max-width: 570px) {
@@ -1016,9 +1249,58 @@ body {
         font-size: 9px;
         height: 20px;
     }
+
+    .about__group-blocks {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .about__group-text {
+        width: 180px;
+        margin: 0;
+    }
+
+    .about-title {
+        font-size: 15px;
+        line-height: 20px;
+
+        &::after {
+            margin-bottom: -10px;
+            width: 40px;
+            right: 22%;
+            height: 3px;
+        }
+    }
+
+    .about-prew {
+        font-size: 7.5px;
+        line-height: 10px;
+    }
+
+    .about-descr {
+        font-size: 6.5px;
+        line-height: 9px;
+        margin: 0;
+    }
+
+    .about__bg-image {
+        width: 180px;
+
+        img {
+            width: 180px;
+            height: 180px;
+        }
+
+        &::after {
+            top: 27%;
+            right: -13%;
+            border: 5px solid #E8C300;
+            padding: 35px;
+        }
+    }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 415px) {
 
     .header-main {
         &::before {
@@ -1065,6 +1347,54 @@ body {
     .header-main__center-button {
         width: 70px;
         font-size: 8px;
+    }
+
+    .about__group-blocks {
+        padding-right: 2%;
+    }
+
+    .about__group-text {
+        width: 100%;
+        margin: 0;
+    }
+
+    .about-title {
+        font-size: 15px;
+        line-height: 20px;
+
+        &::after {
+            margin-bottom: -10px;
+            width: 40px;
+            right: 22%;
+            height: 3px;
+        }
+    }
+
+    .about-prew {
+        font-size: 7.5px;
+        line-height: 10px;
+    }
+
+    .about-descr {
+        font-size: 6.5px;
+        line-height: 9px;
+        margin: 0;
+    }
+
+    .about__bg-image {
+        width: 200px;
+
+        img {
+            width: 160px;
+            height: 160px;
+        }
+
+        &::after {
+            top: 30%;
+            right: -10%;
+            border: 4px solid #E8C300;
+            padding: 28px;
+        }
     }
 }
 
@@ -1176,5 +1506,10 @@ body {
         width: 80px;
         font-size: 9px;
         height: 20px;
+    }
+
+    .about__group-blocks {
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 }
