@@ -1132,6 +1132,12 @@ body {
         width: 250px;
     }
 
+    .ourteam-title {
+        &::after {
+            right: 30%;
+        }
+    }
+
     .ourteam__bg-group {
         width: 250px;
     }
@@ -1169,9 +1175,10 @@ body {
         }
     }
 
-    .formbook-title{
+    .formbook-title {
         width: 200px;
-        &::after{
+
+        &::after {
             right: 35%;
         }
     }
@@ -1318,6 +1325,12 @@ body {
 
     .ourteam__group-text {
         width: 250px;
+    }
+
+    .ourteam-title {
+        &::after {
+            right: 30%;
+        }
     }
 
     .ourteam__bg-group {
@@ -1496,6 +1509,13 @@ body {
         margin-left: 5px;
     }
 
+    
+    .ourteam-title {
+        &::after {
+            right: 31%;
+        }
+    }
+
     .ourteam__bg-group {
         width: 180px;
     }
@@ -1625,6 +1645,13 @@ body {
         width: 200px;
         margin-left: 5px;
     }
+
+    .ourteam-title {
+        &::after {
+            right: 32%;
+        }
+    }
+
 
     .ourteam__bg-group {
         width: 160px;
