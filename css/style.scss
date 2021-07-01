@@ -140,7 +140,7 @@ body {
         z-index: 5;
         background-color: white;
         opacity: 0.2;
-        height: 85vh;
+        height: 100vh;
         width: 1px;
         top: 200px;
         right: 50%;
@@ -491,6 +491,7 @@ body {
     flex-direction: column;
 
     input {
+        font-family: 'open-sans';
         width: 270px;
         height: 60px;
         font-size: 14px;
@@ -503,11 +504,25 @@ body {
     }
 }
 
+
+
+
 .input-selector {
     position: relative;
 
-    input {
-        padding-right: 30px;
+    select {
+        font-family: 'open-sans';
+        width: 270px;
+        height: 60px;
+        font-size: 14px;
+        margin: 10px;
+        padding: 15px 20px;
+        border: none;
+        outline: none;
+        background-color: #E5E5E5;
+        border-radius: 5px;
+        appearance: none;
+        opacity: 0.6;
     }
 
     &::after {
@@ -519,6 +534,7 @@ body {
         height: 10px;
         bottom: 50%;
         right: 10%;
+        pointer-events: none;
     }
 }
 
@@ -562,6 +578,11 @@ body {
 
     span {
         color: rgba($color: #000000, $alpha: .5);
+    }
+
+    a {
+        color: rgba($color: #000000, $alpha: .5);
+        text-decoration: none;
     }
 }
 
@@ -739,6 +760,11 @@ body {
     span {
         color: rgba($color: white, $alpha: .5);
     }
+
+    a {
+        color: rgba($color: white, $alpha: .5);
+        text-decoration: none;
+    }
 }
 
 .galery-group {
@@ -821,10 +847,17 @@ body {
 
     div {
         padding-left: 20px;
+        color: black;
         font-family: 'open-sans-semi';
         font-size: 12px;
         line-height: 12px;
         opacity: 0.7;
+
+        a {
+            font-family: 'open-sans-semi';
+            text-decoration: none;
+            color: black;
+        }
     }
 }
 
@@ -991,6 +1024,14 @@ body {
         }
     }
 
+    .input-selector {
+        select {
+            margin: 5px;
+            width: 189px;
+            height: 60px;
+        }
+    }
+
     .formbook-image {
         min-width: 0px;
         width: 400px;
@@ -1112,6 +1153,16 @@ body {
             height: 45px;
             margin: 5px;
             width: 188px;
+        }
+    }
+
+    .input-selector {
+        select {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 5px;
+            width: 188px;
+            height: 45px;
         }
     }
 
@@ -1333,6 +1384,16 @@ body {
             height: 35px;
             margin: 5px;
             width: 160px;
+        }
+    }
+
+    .input-selector {
+        select {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 5px;
+            width: 160px;
+            height: 35px;
         }
     }
 
@@ -1600,8 +1661,13 @@ body {
         }
     }
 
+    .formbook-form {
+        flex-direction: column;
+
+    }
+
     .formbook__group-content {
-        padding-left: 5%;
+        padding-left: 2%;
         padding-right: 3%;
         justify-content: center;
     }
@@ -1615,8 +1681,19 @@ body {
         input {
             height: 35px;
             margin: 2.5px;
-            width: 140px;
+            width: 250px;
             font-size: 10px;
+        }
+    }
+
+    .input-selector {
+        select {
+            font-size: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 2.5px;
+            width: 250px;
+            height: 35px;
         }
     }
 
@@ -1629,15 +1706,19 @@ body {
     }
 
     .formbook-descr {
+        padding-top: 20px;
+        padding-bottom: 80px;
         font-size: 12px;
     }
 
     .formbook-button {
         height: 35px;
-        width: 285px;
+        width: 250px;
     }
 
     .formbook-image {
+        margin-top: 20px;
+        align-items: center;
         min-width: 0px;
         width: 250px;
 
@@ -1647,6 +1728,7 @@ body {
         }
 
         &::after {
+            top: 33%;
             right: -11%;
         }
     }
@@ -1727,6 +1809,8 @@ body {
     }
 
     .contact__form-group {
+        flex-direction: column;
+
         input {
             height: 45px;
             padding: 10px 15px;
@@ -1739,9 +1823,9 @@ body {
         }
     }
 
-.footer-footer{
-    padding: 20px;
-}
+    .footer-footer {
+        padding: 20px;
+    }
 }
 
 @media(max-width: 567px) {
@@ -1927,7 +2011,7 @@ body {
     }
 
     .formbook__group-content {
-        padding-left: 2%;
+        padding-left: 0;
         padding-right: 5%;
     }
 
@@ -1938,10 +2022,10 @@ body {
 
     .formbook__form-group {
         input {
-            height: 22px;
+            height: 30px;
             margin: 1.5px;
             padding: 7px 10px;
-            width: 100px;
+            width: 185px;
             font-size: 10px;
         }
     }
@@ -1961,20 +2045,24 @@ body {
     }
 
     .input-selector {
-        input {
-            padding-right: 20px;
+        select {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 1.5px;
+            width: 185px;
+            height: 30px;
         }
     }
 
     .formbook-button {
-        height: 22px;
+        height: 30px;
         margin-top: 2px;
-        width: 204px;
+        width: 185px;
         font-size: 12px;
     }
 
     .formbook-image {
-        padding-left: 10px;
+        padding-left: 0;
         width: 180px;
 
         img {
@@ -1983,7 +2071,7 @@ body {
         }
 
         &::after {
-            right: -17%;
+            right: -13%;
         }
     }
 
@@ -2088,7 +2176,7 @@ body {
     }
 }
 
-@media(max-width: 415px) {
+@media(max-width: 425px) {
 
     .header-main {
         &::before {
@@ -2237,10 +2325,20 @@ body {
     .formbook__form-group {
         input {
             padding: 4px 6px;
-            height: 18px;
+            height: 25px;
             margin: 1px;
-            width: 80px;
+            width: 150px;
             font-size: 8px;
+        }
+    }
+
+    .input-selector {
+        select {
+            font-size: 8px;
+            padding: 4px 6px;
+            margin: 1.5px;
+            width: 150px;
+            height: 25px;
         }
     }
 
@@ -2261,17 +2359,11 @@ body {
     .formbook-button {
         height: 18px;
         margin-top: 2px;
-        width: 162px;
+        width: 150px;
         font-size: 10px;
     }
 
-    .input-selector {
-        margin-top: -1.5px;
 
-        input {
-            padding-right: 17px;
-        }
-    }
 
     .formbook-image {
         padding-left: 9px;
@@ -2344,25 +2436,35 @@ body {
     }
 }
 
-@media(max-width: 360px) {
+@media(max-width: 375px) {
 
     .formbook__group-content {
         padding-left: 0;
-        padding-right: 5%;
+        padding-right: 10%;
     }
 
     .formbook-group__main-content {
-        padding-right: 22px;
+        padding-right: 13px;
         width: 100px;
     }
 
     .formbook__form-group {
         input {
             padding: 4px 6px;
-            height: 18px;
+            height: 25px;
             margin: 1px;
-            width: 70px;
-            font-size: 8px;
+            width: 115px;
+            font-size: 7px;
+        }
+    }
+
+    .input-selector {
+        select {
+            font-size: 7px;
+            padding: 4px 6px;
+            margin: 1.5px;
+            width: 115px;
+            height: 25px;
         }
     }
 
@@ -2383,21 +2485,14 @@ body {
     .formbook-button {
         height: 18px;
         margin-top: 2px;
-        width: 142px;
+        width: 115px;
         font-size: 10px;
     }
 
-    .input-selector {
-        margin-top: -1.5px;
-
-        input {
-            padding-right: 17px;
-        }
-    }
 
     .formbook-image {
-        padding-left: 9px;
-        width: 140px;
+        padding-left: 0;
+        width: 120px;
 
         img {
             width: 160px;
@@ -2405,29 +2500,29 @@ body {
         }
 
         &::after {
-            right: -33%;
+            right: -45%;
         }
     }
 
     .event__first-image {
         &::after {
-            left: -12%;
+            left: -14%;
         }
 
         img {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
         }
     }
 
     .event__second-image {
         &::after {
-            right: -12%;
+            right: -14%;
         }
 
         img {
-            width: 140px;
-            height: 140px;
+            width: 130px;
+            height: 130px;
         }
     }
 }
@@ -2556,7 +2651,7 @@ body {
         padding-top: 50px;
     }
 
-    .contact-group{
+    .contact-group {
         padding-top: 25px;
         padding-bottom: 25px;
     }
